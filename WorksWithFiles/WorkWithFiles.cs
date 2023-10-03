@@ -24,6 +24,8 @@ namespace WorksWithFilesLibrary
             get => _currentDirectory;
             private set
             {
+                if (value is null || value == String.Empty)
+                    return;
                 _currentDirectory = value;
                 Directory.SetCurrentDirectory(value);
             }
@@ -46,6 +48,10 @@ namespace WorksWithFilesLibrary
         /// </summary>
         public void WriteCurrentDirectory() => Console.Write(CurrentDirectory + ">>");
 
+        /// <summary>
+        /// Смена текущего каталога, при .. - поднимается на каталог выше
+        /// </summary>
+        /// <param name="newPath">Новый каталог - путь может быть как относительный, так и абсолютный</param>
         public void ChangeDirectory(string newPath)
         {
 
@@ -60,7 +66,7 @@ namespace WorksWithFilesLibrary
             }
 
             if (newPath == "..")
-                CurrentDirectory = Directory.GetParent(CurrentDirectory).ToString();
+                CurrentDirectory = Directory.GetParent(CurrentDirectory)?.ToString();
             else if (Path.IsPathRooted(newPath) && Directory.Exists(newPath))
                 CurrentDirectory = newPath;
             else if (Directory.Exists(Path.Combine(CurrentDirectory + newPath)))
@@ -69,6 +75,9 @@ namespace WorksWithFilesLibrary
                 Console.WriteLine("Directory does not exist.");
         }
 
+        /// <summary>
+        /// Выводит сначала все папки текущего каталога, после все файлы
+        /// </summary>
         public void ShowFiles()
         {
             string[] subdirectoryEntries = Directory.GetDirectories(CurrentDirectory);

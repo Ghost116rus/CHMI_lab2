@@ -8,13 +8,7 @@ a.ShowFiles();
 
 
 a.ChangeDirectory(Console.ReadLine());
-a.WriteCurrentDirectory();
-a.CreateFile(Console.ReadLine());
-a.CreateFile(Console.ReadLine());
-a.CreateFile(Console.ReadLine());
-a.ShowFiles();
-a.DeleteFile(Console.ReadLine());
-a.DeleteFile(Console.ReadLine());
-a.DeleteFile(Console.ReadLine());
+a.WriteCurrentDirectory(); a.ChangeDirectory(Console.ReadLine());
+a.WriteCurrentDirectory(); a.ChangeDirectory(Console.ReadLine());
 
 //a.WriteCurrentPath(); a.CreateFile(Console.ReadLine());
