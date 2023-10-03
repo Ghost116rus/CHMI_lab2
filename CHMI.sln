@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CHMI", "CHMI\CHMI.csproj", "{FF15ED1B-8E53-4947-9D3E-40AC44F5175F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorksWithFilesLibrary", "WorksWithFiles\WorksWithFilesLibrary.csproj", "{2CA32CAE-357A-4A8D-BFC6-8C19C5DF2D63}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF15ED1B-8E53-4947-9D3E-40AC44F5175F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF15ED1B-8E53-4947-9D3E-40AC44F5175F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF15ED1B-8E53-4947-9D3E-40AC44F5175F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF15ED1B-8E53-4947-9D3E-40AC44F5175F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CA32CAE-357A-4A8D-BFC6-8C19C5DF2D63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CA32CAE-357A-4A8D-BFC6-8C19C5DF2D63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CA32CAE-357A-4A8D-BFC6-8C19C5DF2D63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CA32CAE-357A-4A8D-BFC6-8C19C5DF2D63}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3AF590BC-D18C-4A78-BAFE-6C40B2CA48E1}
+	EndGlobalSection
+EndGlobal
