@@ -27,7 +27,7 @@ namespace ComandMode
                         Console.WriteLine($"\tВо время {(isCreationCommand ? "создания" : "удаления")} файла {item}, произошла ошибка");
                         break;
                     case -2:
-                        Console.WriteLine($"\t{(isCreationCommand ? "У файла неверное расширение" : "Данный файл не существует")}");
+                        Console.WriteLine($"\t{(isCreationCommand ? $"У файла {item} неверное расширение" : $"Данный файл {item} не существует")}");
                         break;
 
                     default:
@@ -76,6 +76,18 @@ namespace ComandMode
                             continue;
                         }
                         _workWithFiles.ShowFiles();
+                        break;
+                    case "help":
+                        Console.WriteLine("make" + "\t make имя файла [... имя файла]" +
+                            "\n\tпредназначена для создания файлов. Параметры вводятся после команды черезе пробел." +
+                            "\n\tПринимает параматеры как с абсолютным путем, так и с относительным.");
+                        Console.WriteLine("remove" + "\t remove имя файла [... имя файла]" +
+                            "\n\tпредназначена для удаления файлов. Параметры вводятся после команды черезе пробел." +
+                            "\n\tПринимает параматеры как с абсолютным путем, так и с относительным.");
+                        Console.WriteLine("goto" + "\t goto F:\\ProgramFiles\\Test" +
+                            "\n\tпредназначена для смены текущей директории. Принимает только один параметр");
+                        Console.WriteLine("show" + "\t выводит все файлы текущей директории. Не принимает параметров");
+                        Console.WriteLine("exit" + "\t предназначен для завершения работы");
                         break;
 
                     default:
