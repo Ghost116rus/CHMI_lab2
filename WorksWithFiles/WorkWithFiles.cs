@@ -72,7 +72,7 @@ namespace WorksWithFilesLibrary
             else if (Directory.Exists(Path.Combine(CurrentDirectory + newPath)))
                 CurrentDirectory = Path.Combine(CurrentDirectory + newPath);
             else
-                Console.WriteLine("Directory does not exist.");
+                Console.WriteLine("Каталог не существует.");
         }
 
         /// <summary>

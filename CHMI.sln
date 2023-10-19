@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CHMI", "CHMI\CHMI.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorksWithFilesLibrary", "WorksWithFiles\WorksWithFilesLibrary.csproj", "{2CA32CAE-357A-4A8D-BFC6-8C19C5DF2D63}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleMenu", "ConsoleMenu\ConsoleMenu.csproj", "{1E1DEB97-B447-4A8C-91C3-26EF946195C7}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComandMode", "ComandMode\ComandMode.csproj", "{9D461ADA-68E9-4E35-81BE-DE41F10B10C1}"
 EndProject
 Global
@@ -23,6 +25,10 @@ Global
 		{2CA32CAE-357A-4A8D-BFC6-8C19C5DF2D63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CA32CAE-357A-4A8D-BFC6-8C19C5DF2D63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CA32CAE-357A-4A8D-BFC6-8C19C5DF2D63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E1DEB97-B447-4A8C-91C3-26EF946195C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E1DEB97-B447-4A8C-91C3-26EF946195C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E1DEB97-B447-4A8C-91C3-26EF946195C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E1DEB97-B447-4A8C-91C3-26EF946195C7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9D461ADA-68E9-4E35-81BE-DE41F10B10C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9D461ADA-68E9-4E35-81BE-DE41F10B10C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D461ADA-68E9-4E35-81BE-DE41F10B10C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
