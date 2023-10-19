@@ -39,7 +39,7 @@ namespace WorksWithFilesLibrary
         public WorkWithFiles(string path) : this()
         {
             if (Directory.Exists(path))
-                _currentDirectory = path;
+                CurrentDirectory = path;
 
         }
 
@@ -72,7 +72,7 @@ namespace WorksWithFilesLibrary
             else if (Directory.Exists(Path.Combine(CurrentDirectory + newPath)))
                 CurrentDirectory = Path.Combine(CurrentDirectory + newPath);
             else
-                Console.WriteLine("Directory does not exist.");
+                Console.WriteLine("Каталог не существует.");
         }
 
         /// <summary>
