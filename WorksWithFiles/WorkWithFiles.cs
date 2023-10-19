@@ -39,7 +39,7 @@ namespace WorksWithFilesLibrary
         public WorkWithFiles(string path) : this()
         {
             if (Directory.Exists(path))
-                _currentDirectory = path;
+                CurrentDirectory = path;
 
         }
 

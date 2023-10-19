@@ -41,7 +41,7 @@ namespace ComandMode
         static void Main(string[] args)
         {
             string comand = "";
-            _workWithFiles = new WorkWithFiles();
+            _workWithFiles = new WorkWithFiles("D:\\Test");
 
             while (comand != "exit")
             {
