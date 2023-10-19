@@ -43,7 +43,7 @@ namespace ComandMode
             string comand = "";
             _workWithFiles = new WorkWithFiles("D:\\Test");
 
-            while (true)
+            while (comand != "exit")
             {
                 _workWithFiles.WriteCurrentDirectory(); comand = Console.ReadLine();
 
