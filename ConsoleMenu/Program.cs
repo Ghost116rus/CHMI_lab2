@@ -150,7 +150,7 @@ namespace ConsoleMenu
         {
             Console.WriteLine("Введите текущий каталог файлов абсолютным путём либо пробел");
             var rootAsk = Console.ReadLine().Trim();
-            var rootPath = rootAsk == ""? "C:\\chmitest": rootAsk;
+            var rootPath = rootAsk == "" ? "C:\\chmitest" : rootAsk;
             var fileOperator = new WorkWithFiles(rootPath);
             Console.WriteLine("Текущий каталог файлов:");
             fileOperator.ShowFiles();
