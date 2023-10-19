@@ -43,7 +43,7 @@ namespace ComandMode
             string comand = "";
             _workWithFiles = new WorkWithFiles("D:\\Test");
 
-            while (comand != "exit")
+            while (true)
             {
                 _workWithFiles.WriteCurrentDirectory(); comand = Console.ReadLine();
 
@@ -89,7 +89,8 @@ namespace ComandMode
                         Console.WriteLine("show" + "\t выводит все файлы текущей директории. Не принимает параметров");
                         Console.WriteLine("exit" + "\t предназначен для завершения работы");
                         break;
-
+                    case "exit":
+                        break;
                     default:
                         Console.WriteLine("Такой команды нет!");
                         continue;
