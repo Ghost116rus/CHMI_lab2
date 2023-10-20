@@ -39,6 +39,27 @@ namespace ConsoleMenu
 
         }
 
+        private static void DeleteManyFiles(WorkWithFiles fO, string arg)
+        {
+            var files = arg.Split();
+            foreach (var file in files)
+            {
+                var res = fO.DeleteFile(file);
+                if (res == -2)
+                {
+                    Console.WriteLine($"{file} - такого файла не существует!");
+                }
+                else if (res == -1)
+                {
+                    Console.WriteLine("Произошла ошибка при удалении файла");
+                }
+                else
+                {
+                    Console.WriteLine($"{file} - Файл успешно удалён");
+                }
+            }
+        }
+
         private static void HandleDeleteFile(WorkWithFiles fO)
         {
             var delChoice = "2";
@@ -80,23 +101,11 @@ namespace ConsoleMenu
             else
             {
 
-                Console.WriteLine("Введите абсолютный путь к файлу и формат файла:");
+                Console.WriteLine("Введите абсолютный путь к файлам и формат файлов:");
                 newFileName = Console.ReadLine();
             }
 
-            var res = fO.DeleteFile(newFileName);
-            if (res == -2)
-            {
-                Console.WriteLine($"{newFileName} - такого файла не существует!");
-            }
-            else if (res == -1)
-            {
-                Console.WriteLine("Произошла ошибка при удалении файла");
-            }
-            else
-            {
-                Console.WriteLine("Файл успешно удалён");
-            }
+            DeleteManyFiles(fO, newFileName);
 
         }
         private static void HandleChangeDirectory(WorkWithFiles fO)
