@@ -60,8 +60,11 @@ namespace lab3_forms
 
                 try
                 {
-                    _fileOperator.ChangeDirectory(selectedItem.ToString());
-                    this.CurrentDirLbl.Text = selectedItem.ToString();
+                    var filepathStr = selectedItem.ToString();
+                    if(!Directory.GetLogicalDrives().Contains(filepathStr)) { filepathStr = "\\" + filepathStr; }
+                    _fileOperator.ChangeDirectory(filepathStr);
+                    this.CurrentDirLbl.Text = (Directory.GetParent(_fileOperator.CurrentDirectory) + filepathStr)
+                        .Replace("\\\\","\\");
                     UpdateListOfFiles();
                 }
                 catch (Exception ex)
