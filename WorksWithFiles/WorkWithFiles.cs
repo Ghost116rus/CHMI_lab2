@@ -97,7 +97,12 @@ namespace WorksWithFilesLibrary
         /// <returns></returns>
         public string[] GetAllFiles()
         {
+            
             string[] allSubFiles = Directory.GetFileSystemEntries(CurrentDirectory);
+            for (int i = 0; i < allSubFiles.Length; i++)
+            {
+                allSubFiles[i] = Path.GetFileName(allSubFiles[i]);
+            }
 
             return allSubFiles;
         }

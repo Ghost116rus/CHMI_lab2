@@ -51,9 +51,10 @@ namespace lab3_forms
             }
         }
 
-        private void ChangeDirBySelected()
+
+        private void ChangeDirBySelected(object filepath)
         {
-            var selectedItem = FilesListBox.SelectedItem;
+            var selectedItem = filepath;
             if (selectedItem != null && Directory.Exists(selectedItem.ToString()))
             {
 
@@ -115,12 +116,12 @@ namespace lab3_forms
 
         private void ChangeDirBtn_Click(object sender, EventArgs e)
         {
-            ChangeDirBySelected();
+            ChangeDirBySelected(FilesListBox.SelectedItem);
         }
 
         private void FilesListBox_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            ChangeDirBySelected();
+            ChangeDirBySelected(FilesListBox.SelectedItem);
         }
 
         private void AddFileBtn_Click(object sender, EventArgs e)
@@ -132,6 +133,16 @@ namespace lab3_forms
         private void DeleteFileBtn_Click(object sender, EventArgs e)
         {
             DeleteFile();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            DisksListBox.Items.AddRange(Directory.GetLogicalDrives());
+        }
+
+        private void DisksListBox_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+           ChangeDirBySelected(DisksListBox.SelectedItem);
         }
     }
 }
