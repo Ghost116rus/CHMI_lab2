@@ -37,11 +37,13 @@
             this.CurrentDirLbl = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.GoBackDirBtn = new System.Windows.Forms.Button();
+            this.DisksListBox = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // AddFileBtn
             // 
-            this.AddFileBtn.Location = new System.Drawing.Point(198, 345);
+            this.AddFileBtn.Location = new System.Drawing.Point(401, 340);
             this.AddFileBtn.Name = "AddFileBtn";
             this.AddFileBtn.Size = new System.Drawing.Size(96, 42);
             this.AddFileBtn.TabIndex = 0;
@@ -51,17 +53,17 @@
             // 
             // ShowDirBtn
             // 
-            this.ShowDirBtn.Location = new System.Drawing.Point(300, 345);
+            this.ShowDirBtn.Location = new System.Drawing.Point(299, 340);
             this.ShowDirBtn.Name = "ShowDirBtn";
             this.ShowDirBtn.Size = new System.Drawing.Size(96, 42);
             this.ShowDirBtn.TabIndex = 1;
-            this.ShowDirBtn.Text = "Показать";
+            this.ShowDirBtn.Text = "Обновить";
             this.ShowDirBtn.UseVisualStyleBackColor = true;
             this.ShowDirBtn.Click += new System.EventHandler(this.ShowDirBtn_Click);
             // 
             // DeleteFileBtn
             // 
-            this.DeleteFileBtn.Location = new System.Drawing.Point(402, 345);
+            this.DeleteFileBtn.Location = new System.Drawing.Point(503, 340);
             this.DeleteFileBtn.Name = "DeleteFileBtn";
             this.DeleteFileBtn.Size = new System.Drawing.Size(96, 42);
             this.DeleteFileBtn.TabIndex = 2;
@@ -71,7 +73,7 @@
             // 
             // ChangeDirBtn
             // 
-            this.ChangeDirBtn.Location = new System.Drawing.Point(504, 345);
+            this.ChangeDirBtn.Location = new System.Drawing.Point(197, 340);
             this.ChangeDirBtn.Name = "ChangeDirBtn";
             this.ChangeDirBtn.Size = new System.Drawing.Size(96, 42);
             this.ChangeDirBtn.TabIndex = 3;
@@ -110,7 +112,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(564, 367);
+            this.label2.Location = new System.Drawing.Point(665, 362);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 16);
             this.label2.TabIndex = 7;
@@ -125,11 +127,32 @@
             this.GoBackDirBtn.UseVisualStyleBackColor = true;
             this.GoBackDirBtn.Click += new System.EventHandler(this.GoBackDirBtn_Click);
             // 
+            // DisksListBox
+            // 
+            this.DisksListBox.FormattingEnabled = true;
+            this.DisksListBox.ItemHeight = 16;
+            this.DisksListBox.Location = new System.Drawing.Point(29, 70);
+            this.DisksListBox.Name = "DisksListBox";
+            this.DisksListBox.Size = new System.Drawing.Size(120, 196);
+            this.DisksListBox.TabIndex = 9;
+            this.DisksListBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.DisksListBox_MouseDoubleClick);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(26, 51);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(123, 16);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Доступные диски:";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.DisksListBox);
             this.Controls.Add(this.GoBackDirBtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.CurrentDirLbl);
@@ -141,6 +164,7 @@
             this.Controls.Add(this.AddFileBtn);
             this.Name = "MainForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,6 +181,8 @@
         private System.Windows.Forms.Label CurrentDirLbl;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button GoBackDirBtn;
+        private System.Windows.Forms.ListBox DisksListBox;
+        private System.Windows.Forms.Label label3;
     }
 }
 
