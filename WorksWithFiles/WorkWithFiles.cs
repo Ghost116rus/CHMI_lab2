@@ -90,6 +90,18 @@ namespace WorksWithFilesLibrary
                 Console.WriteLine("  " + fileEntry);
         }
 
+
+        /// <summary>
+        /// Вовзвращает массив файлов текущего каталога в виде строк <see cref="string"/>
+        /// </summary>
+        /// <returns></returns>
+        public string[] GetAllFiles()
+        {
+            string[] allSubFiles = Directory.GetFileSystemEntries(CurrentDirectory);
+
+            return allSubFiles;
+        }
+
         /// <summary>
         /// Создает файл
         /// </summary>
