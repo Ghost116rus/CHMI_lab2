@@ -60,7 +60,7 @@ namespace lab3_forms
 
                 try
                 {
-                    _fileOperator.ChangeDirectory(selectedItem.ToString());
+                    _fileOperator.ChangeDirectory("\\" + selectedItem.ToString());
                     this.CurrentDirLbl.Text = selectedItem.ToString();
                     UpdateListOfFiles();
                 }
