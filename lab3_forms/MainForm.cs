@@ -73,21 +73,24 @@ namespace lab3_forms
         private void DeleteFile()
         {
             var selectedItem = FilesListBox.SelectedItem;
-            var res = _fileOperator.DeleteFile(selectedItem.ToString());
-            if (res == -2)
+            if(selectedItem != null)
             {
-                MessageBox.Show($"{selectedItem} - такого файла не существует");
-            }
-            else if (res == -1)
-            {
-                MessageBox.Show("Произошла ошибка при удалении файла");
-            }
-            else
-            {
-                MessageBox.Show("Файл успешно удалён");
-                UpdateListOfFiles();
-            }
+                var res = _fileOperator.DeleteFile(selectedItem.ToString());
+                if (res == -2)
+                {
+                    MessageBox.Show($"{selectedItem} - такого файла не существует");
+                }
+                else if (res == -1)
+                {
+                    MessageBox.Show("Произошла ошибка при удалении файла");
+                }
+                else
+                {
+                    MessageBox.Show("Файл успешно удалён");
+                    UpdateListOfFiles();
+                }
 
+            }
         }
 
 
